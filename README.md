@@ -1,2 +1,6 @@
 # nuclear-neighbor
 Decompilation of the game "Chernobyl Neighbor. Clown Gang". This is not a port to PC.
+
+I found it extremely difficult to port as the tools I used (AssetRipper and even DevX) could not fully recover the scripts). To anyone who would like to give it a try at porting it, there are two files that will be uploaded in the latest Release: the AssetRipper decompilation and the DevX decompilation. The DevX decompilation is what DevX managed to unpack, which has most of the scripts readable and somewhat functional, but there are many errors, because of the bizarre syntax the developer used. For example, in UIController, the first GameObject is, for some reason, named "{ ĠÍ" which breaks Unity because of the space and open curly bracket. AssetRipper attempts to fix this by changing these, so in that same example, it might be "_007B_00A0Ġ_009BÍ".
+
+But regardless, AssetRipper could not decompile all of the scripts (most scripts in the AssetRipper version just return null as it seems). Thus, it's best to start from the DevX decompilation and use the AssetRipper decompilation to fix certain things - I just don't have a lot of motivation to try to bruteforce fixing things like I did with Hello Minion Spooky Neighbor.
